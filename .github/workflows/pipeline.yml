@@ -1,11 +1,11 @@
 name: Pantry pipeline
-
+ 
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
+ 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
@@ -34,3 +34,4 @@ jobs:
         with:
           name: pantry-app
           path: dist/
+          if-no-files-found: error
