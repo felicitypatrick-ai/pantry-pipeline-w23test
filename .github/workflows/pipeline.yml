@@ -17,7 +17,7 @@ jobs:
           python-version: "3.12"
       - name: Run the tests
         shell: bash
-        run: python -m unittest discover -s tests -p "*_test.py" -v 2>&1 | tee test-report.txt
+        run: python -m unittest discover -s tests -v 2>&1 | tee test-report.txt
       - name: Show the test report on the run page
         if: always()
         run: |
