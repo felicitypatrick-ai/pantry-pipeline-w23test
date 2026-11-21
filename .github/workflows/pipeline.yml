@@ -26,9 +26,9 @@ jobs:
           echo '```' >> "$GITHUB_STEP_SUMMARY"
       - name: Build the package
         run: |
-          echo "Built from commit $GITHUB_SHA" > dist/BUILD_INFO.txt
           mkdir -p dist
           cp app/*.py dist/
+          echo "Built from commit $GITHUB_SHA" > dist/BUILD_INFO.txt
       - name: Upload the build artifact
         uses: actions/upload-artifact@v4
         with:
